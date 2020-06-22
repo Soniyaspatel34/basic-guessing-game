@@ -1,0 +1,20 @@
+import random 
+answer = random.randint(1,10)
+Username = input("Please enter your name to play:")
+print("{0} guess a number between 1 and 10:".format(Username))
+guess = int(input())
+count=1
+if guess != answer: 
+    if guess < answer: 
+        print("please guess higher")
+    else: 
+        print("please guess lower")
+    count = count + 1
+    guess= int(input())
+    if guess == answer:
+        print("Well done {0}, You guessed my number in {1} tries".format(Username,count))
+    else:
+        print("Sorry {0} you lost".format(Username))
+        print("I was thinking of {0}.".format(answer))
+else: 
+    print("Congrats {0}got it right in the first guess!".format(Username))
