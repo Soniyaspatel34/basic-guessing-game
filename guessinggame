@@ -17,4 +17,4 @@ if guess != answer:
         print("Sorry {0} you lost".format(Username))
         print("I was thinking of {0}.".format(answer))
 else: 
-    print("Congrats {0}got it right in the first guess!".format(Username))
+    print("Congrats {0} got it right in the first guess!".format(Username))
