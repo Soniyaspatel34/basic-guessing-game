@@ -1,3 +1,4 @@
+#User has 2 chances to guess a random number between 1 and 10 
 import random 
 answer = random.randint(1,10)
 Username = input("Please enter your name to play:")
@@ -6,15 +7,17 @@ guess = int(input())
 count=1
 if guess != answer: 
     if guess < answer: 
-        print("please guess higher")
+        print("You have one more try: Please guess higher")
     else: 
-        print("please guess lower")
+        print("You have one more try: Please guess lower")
     count = count + 1
     guess= int(input())
     if guess == answer:
         print("Well done {0}, You guessed my number in {1} tries".format(Username,count))
+        # I know that the count is not nessasary but I wanted to show that I knew how to use it and how to call two variables that could change
     else:
         print("Sorry {0} you lost".format(Username))
         print("I was thinking of {0}.".format(answer))
 else: 
     print("Congrats {0} got it right in the first guess!".format(Username))
+
